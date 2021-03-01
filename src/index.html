@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smartexpense</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    body {
+        background-image: url('https://image.freepik.com/free-photo/low-angle-shot-mesmerizing-starry-sky_181624-27925.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+
+
+    }
+    h1{
+      color: aqua;
+    }
+
+    #content {
+      display: none;
+    }
+
+    form {
+
+      margin-bottom: 10px;
+      margin-left: 40%;
+    }
+
+    label {
+      font-size: 20px;
+      color: white;
+    }
+
+    input {
+      height: 30px;
+    }
+
+    button {
+      margin-left: 0%;
+      width: 185px;
+      height: 50px;
+      background: skyblue;
+      border-radius: 6px;
+      transition: all .3s cubic-bezier(0.67, 0.17, 0.40, 0.83);
+
+    }
+
+    ul {
+      margin-left: 200px;
+      color: #f9f8fc;
+    }
+    .content {
+      color: #f9f8fc;
+    }
+    .amount{
+      color: rgb(253, 251, 251);
+    }
+    span{
+      color: rgb(252, 249, 249);
+    }
+    .mon{
+      color: green;
+      font-size: 30px;
+    }
+
+    
+  </style>
+</head>
+
+<body>
+  <h1>Smart - Expense</h1>
+  <br>
+  <i class="fa fa-inr"></i>
+  <i class="fa fa-inr" style="font-size:24px"></i>
+  <i class="fa fa-inr" style="font-size:36px"></i>
+  <i class="fa fa-inr" style="font-size:48px;color:red"></i>
+ 
+  <span class="mon"></span>
+  <form class="data" onSubmit="App.createTask(); return false;">
+    <label>Enter Amount</label>
+    <br>
+    <input id="cost" type="value" name="amount">
+    <br>
+    <label>Details:</label>
+    <br>
+    <input id="detail" type="text" name="detail">
+    <br>
+    <br>
+    <button>SUBMIT</button>
+  </form>
+  <div id="loader">Loading...</div>
+  <div id="content">
+    <ul id="taskList" class="list-unstyled">
+      List Goes Here
+      <div class="taskTemplate" class="checkbox" style="display: none">
+        <label>
+          <span class="content"></span>
+          <span> - </span>
+          <span class="amount"></span>
+        </label>
+      </div>
+    </ul>
+  </div>
+</body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendor/truffle-contract/dist/truffle-contract.js"></script>
+<script src="app.js"></script>
+
+</html>
