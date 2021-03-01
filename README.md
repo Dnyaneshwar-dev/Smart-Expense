@@ -8,4 +8,4 @@ Decentralized expense manager using Ethereum Smart Contracts | Truffle | Ganache
 
 
 
-Resourcs : dappuniversity.com
+Resources : dappuniversity.com
